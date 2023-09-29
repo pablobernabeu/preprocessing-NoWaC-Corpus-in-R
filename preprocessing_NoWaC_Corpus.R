@@ -27,15 +27,14 @@ head(corpus)
 corpus = corpus %>%
   
   # Assign informative names to columns
-  rename(word = V1, category = V2) %>%
+  rename( word = V1, 
+          category = V2,
+          gender = category ) %>%
   
   # Select nouns only, dropping verbs etc. Furthermore, 
   # remove nouns that have any uppercase letters.
   filter(str_detect(category, '^subst'),
          !str_detect(word, '[:upper:]')) %>%
-  
-  # Rename column
-  rename(gender = category) %>%
   
   # Split words and frequencies into separate columns
   mutate( frequency = word %>% str_extract('\\d+') %>% as.numeric(),
