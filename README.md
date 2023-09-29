@@ -1,6 +1,6 @@
 # preprocessing_NoWaC_Corpus.R
 
-#### A script for pre-processing a frequency list from the NoWaC Corpus (Norwegian Web as Corpus)
+#### A script for pre-processing a frequency list from the Norwegian Web as Corpus (NoWaC)
 
 Corpus reference: Guevara, E. R. (2010). NoWaC: A large web-based corpus for Norwegian. In *Proceedings of the NAACL HLT 2010 Sixth Web as Corpus Workshop* (pp. 1-7). https://aclanthology.org/W10-1501
 
