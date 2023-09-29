@@ -15,7 +15,7 @@ library(stringr)  # text processing
 # secondary by frequency within each character', and the direct URL was the following:    
 # https://www.tekstlab.uio.no/nowac/download/nowac-1.1.lemma.frek.sort_alf_frek.txt.gz
 # The download required signing in to an institutional network. Next, the downloaded file 
-# was unzipped and saved.
+# was unzipped and saved before the pre-processing in R.
 
 corpus = read.delim('nowac-1.1.lemma.frek.sort_alf_frek.txt', 
                     header = FALSE, stringsAsFactors = FALSE, 
