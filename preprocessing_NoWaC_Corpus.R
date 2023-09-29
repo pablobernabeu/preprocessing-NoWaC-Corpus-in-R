@@ -1,5 +1,4 @@
 
-
 # The present script can be used to pre-process data from a frequency list of the Norwegian 
 # as Web Corpus (NoWaC). 
 
