@@ -4,5 +4,5 @@
 
 Corpus reference: Guevara, E. R. (2010). NoWaC: A large web-based corpus for Norwegian. In *Proceedings of the NAACL HLT 2010 Sixth Web as Corpus Workshop* (pp. 1-7). https://aclanthology.org/W10-1501
 
-The frequency list was downloaded in March 2023 from https://www.hf.uio.no/iln/english/about/organization/text-laboratory/services/nowac-frequency.html. Specifically, the list was described as 'frequency list sorted primary alphabetic and secondary by frequency within each character', and the direct URL was the following: https://www.tekstlab.uio.no/nowac/download/nowac-1.1.lemma.frek.sort_alf_frek.txt.gz. The download required signing in to an institutional network. Next, the downloaded file was unzipped and saved before the pre-processing in R.
+The present script is used to pre-process data from a frequency list of the NoWaC Corpus. The frequency list used can be downloaded from https://www.hf.uio.no/iln/english/about/organization/text-laboratory/services/nowac-frequency.html. Specifically, the list is described as 'frequency list sorted primary alphabetic and secondary by frequency within each character', and the direct URL is: https://www.tekstlab.uio.no/nowac/download/nowac-1.1.lemma.frek.sort_alf_frek.txt.gz. The download requires signing in to an institutional network. Next, the downloaded file must be unzipped before the pre-processing in R.
 
