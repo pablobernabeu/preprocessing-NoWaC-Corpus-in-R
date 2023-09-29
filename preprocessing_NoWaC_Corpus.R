@@ -1,11 +1,8 @@
 
-library(dplyr)  # data wrangling
-library(stringr)  # text processing
-
 
 # The present script is used to pre-process data from a frequency list of the Norwegian as 
 # Web Corpus (NoWaC). 
-# 
+
 # Before using this script, the frequency list can be downloaded from 
 # https://www.hf.uio.no/iln/english/about/organization/text-laboratory/services/nowac-frequency.html. 
 # The list is described as 'frequency list sorted primary alphabetic and secondary by frequency 
@@ -19,6 +16,9 @@ library(stringr)  # text processing
 # Guevara, E. R. (2010). NoWaC: A large web-based corpus for Norwegian. In Proceedings of the 
 # NAACL HLT 2010 Sixth Web as Corpus Workshop (pp. 1-7). https://aclanthology.org/W10-1501
 
+
+library(dplyr)  # data wrangling
+library(stringr)  # text processing
 
 corpus = read.delim('nowac-1.1.lemma.frek.sort_alf_frek.txt', 
                     header = FALSE, stringsAsFactors = FALSE, 
