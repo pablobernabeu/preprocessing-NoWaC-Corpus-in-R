@@ -29,9 +29,7 @@ head(corpus)
 corpus = corpus %>%
   
   # Assign informative names to columns
-  rename( word = V1, 
-          category = V2,
-          gender = category ) %>%
+  rename(word = V1, category = V2) %>%
   
   # Select nouns only, dropping verbs etc. Furthermore, 
   # remove nouns that have any uppercase letters.
@@ -57,6 +55,10 @@ corpus = corpus %>%
          # Clean up tokens by keeping only items 
          # with a frequency of 500 or greater.
          frequency >= 500) %>%
+  
+  # Remove category column, which is superseded 
+  # by the gender column.
+  select(-category) %>%
   
   # Order columns
   select(word, gender, frequency, letters)
