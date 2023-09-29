@@ -41,9 +41,9 @@ corpus = corpus %>%
           word = word %>% str_remove('^\\s*\\d*|^\\s*') %>% str_remove('^\\s*'),
           
           # Extract gender of each noun into standalone column
-          gender = ifelse(gender == 'subst_mask', 'masculine',
-                          ifelse(gender == 'subst_fem', 'feminine',
-                                 ifelse(gender == 'subst_nøyt', 'neuter', NA))),
+          gender = ifelse(category == 'subst_mask', 'masculine',
+                          ifelse(category == 'subst_fem', 'feminine',
+                                 ifelse(category == 'subst_nøyt', 'neuter', NA))),
           
           # Count number of letters per word
           letters = nchar(word)
