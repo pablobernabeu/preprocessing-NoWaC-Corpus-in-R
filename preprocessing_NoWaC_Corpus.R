@@ -14,7 +14,7 @@ library(stringr)  # text processing
 # download requires signing in to an institutional network. Last, the downloaded file must 
 # be unzipped.
 
-# NoWaC corpus reference
+# Reference of the corpus
 # 
 # Guevara, E. R. (2010). NoWaC: A large web-based corpus for Norwegian. In Proceedings of the 
 # NAACL HLT 2010 Sixth Web as Corpus Workshop (pp. 1-7). https://aclanthology.org/W10-1501
