@@ -1,8 +1,8 @@
 # preprocessing_NoWaC_Corpus.R
 
-The present script is used to pre-process data from a frequency list of the Norwegian as Web Corpus (NoWaC). 
+The present script can be used to pre-process data from a frequency list of the Norwegian as Web Corpus (NoWaC). 
 
-Before using this script, the frequency list should be downloaded from  https://www.hf.uio.no/iln/english/about/organization/text-laboratory/services/nowac-frequency.html. The list is described as 'frequency list sorted primary alphabetic and secondary by frequency within each character', and the direct URL is: https://www.tekstlab.uio.no/nowac/download/nowac-1.1.lemma.frek.sort_alf_frek.txt.gz. The download requires signing in to an institutional network. Last, the downloaded file should be unzipped.
+Before using the script, the frequency list should be downloaded from  https://www.hf.uio.no/iln/english/about/organization/text-laboratory/services/nowac-frequency.html. The list is described as 'frequency list sorted primary alphabetic and secondary by frequency within each character', and the direct URL is: https://www.tekstlab.uio.no/nowac/download/nowac-1.1.lemma.frek.sort_alf_frek.txt.gz. The download requires signing in to an institutional network. Last, the downloaded file should be unzipped.
 
 #### Reference of the corpus
 
