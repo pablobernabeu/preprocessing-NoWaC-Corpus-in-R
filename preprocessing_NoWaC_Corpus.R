@@ -65,9 +65,22 @@ corpus = corpus %>%
 
 # Many nouns are repeated in the corpus because they are tagged with more than one gender
 # (for background, see Rodina & Westergaard, 2015 https://doi.org/10.1017/S1470542714000245, 
-# 2021 https://doi.org/10.1017/S1470542719000217). Generally, in these ambiguous cases in
-# the present corpus, either entry has a much higher frequency. To resolve these 
-# ambiguities, only the entry with the highest frequency will be kept.
+# 2021 https://doi.org/10.1017/S1470542719000217). To prevent errors, select only the words 
+# that have one consistent gender in the corpus. 
+
+words_with_one_gender = 
+  corpus %>% 
+  count(word, gender) %>% 
+  count(word) %>% 
+  arrange(desc(n)) %>% 
+  filter(n == 1) %>%
+  pull(word)
+
+corpus = corpus %>%
+  filter(word %in% words_with_one_gender)
+
+# To finish resolving duplicated entries, keep only the entry with the highest frequency 
+# out of any duplicates.
 
 corpus = corpus %>%
   arrange(word, desc(frequency)) %>% 
