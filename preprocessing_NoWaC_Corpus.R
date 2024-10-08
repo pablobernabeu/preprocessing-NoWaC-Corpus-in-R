@@ -86,3 +86,14 @@ corpus = corpus %>%
   arrange(word, desc(frequency)) %>% 
   filter(!duplicated(word))
 
+# Remove potential English words. This is done by removing words that coincide with 
+# any of the 10,000 words present in the MIT 10,000 Word List 
+# (https://www.mit.edu/~ecprice/wordlist.10000).
+
+English_words = read.csv('https://www.mit.edu/~ecprice/wordlist.10000', 
+                         col.names = 'word')
+
+corpus = corpus %>%
+  filter(!word %in% English_words$word)
+
+
