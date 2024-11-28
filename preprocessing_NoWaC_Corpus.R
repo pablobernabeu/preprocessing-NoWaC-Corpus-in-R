@@ -60,8 +60,7 @@ corpus = corpus %>%
          # Remove 'selvmord' (meaning 'suicide')
          word != 'selvmord',
          
-         # Clean up tokens by keeping only items 
-         # with a frequency of 500 or greater.
+         # Only keep items with a frequency of 500 or higher
          frequency >= 500) %>%
   
   # Remove category column, which is superseded 
