@@ -50,18 +50,19 @@ corpus = corpus %>%
   ) %>%
   
   # Only keep entries with gender information
-  filter(complete.cases(gender),
-         
-         # Remove 'selvom' (meaning 'although') and 'vist' 
-         # (meaning 'shown'), which are erroneously 
-         # classed as nouns in the NoWaC corpus.
-         !word %in% c('selvom', 'vist'),
-         
-         # Remove 'selvmord' (meaning 'suicide')
-         word != 'selvmord',
-         
-         # Only keep items with a frequency of 500 or higher
-         frequency >= 500) %>%
+  filter( complete.cases(gender),
+          
+          # Remove 'selvom' (meaning 'although') and 'vist' 
+          # (meaning 'shown'), which are erroneously 
+          # classed as nouns in the NoWaC corpus.
+          !word %in% c('selvom', 'vist'),
+          
+          # Remove 'selvmord' (meaning 'suicide')
+          word != 'selvmord',
+          
+          # Only keep items with a frequency of 500 or higher
+          frequency >= 500 
+  ) %>%
   
   # Remove category column, which is superseded 
   # by the gender column.
