@@ -57,9 +57,6 @@ corpus = corpus %>%
           # classed as nouns in the NoWaC corpus.
           !word %in% c('selvom', 'vist'),
           
-          # Remove 'selvmord' (meaning 'suicide')
-          word != 'selvmord',
-          
           # Only keep items with a frequency of 500 or higher
           frequency >= 500 
   ) %>%
